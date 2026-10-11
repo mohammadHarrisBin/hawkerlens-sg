@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HawkerLens SG — Snap your hawker dish, eat smarter</title>
+<meta name="description" content="Snap any hawker dish, get calories, allergens and healthier swaps. Built for Build With AI: Basics hackathon.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">🔍🍗 HawkerLens <span>SG</span></div>
+  <div class="top-actions">
+    <span class="pill" id="dishCount">12 dishes</span>
+    <div class="lang-toggle" role="group" aria-label="Language">
+      <button id="btnEN" class="active">EN</button>
+      <button id="btnZH">简体</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <h1 id="heroTitle">Snap your lunch. Know your lunch.</h1>
+    <p id="heroSub">Hawker-food nutrition with Singlish soul — calories, allergens, healthier swaps. No sign-up, works offline.</p>
+  </section>
+
+  <section class="upload" id="dropZone">
+    <div class="upload-inner">
+      <div class="upload-icon">📸</div>
+      <div>
+        <strong id="uploadTitle">Snap / upload your dish</strong>
+        <p id="uploadSub">JPG or PNG, max 5MB. Photo stays on your device.</p>
+      </div>
+      <label class="btn" for="photoInput" id="uploadBtn">Choose photo</label>
+      <input type="file" id="photoInput" accept="image/*" hidden>
+    </div>
+    <p class="warn" id="uploadWarn" hidden></p>
+  </section>
+
+  <section class="searchrow">
+    <input type="search" id="search" placeholder="Search: laksa, prata, fish soup…">
+  </section>
+
+  <section class="grid" id="dishGrid" aria-label="Dishes"></section>
+
+  <section class="result" id="result" aria-live="polite"></section>
+
+  <footer>
+    <p id="disclaimer">Estimates from HPB averages — not medical advice. Built with the Devpost Learn Skill Pack (scope → prd → spec → build).</p>
+    <p><a href="https://learn-ai-basics.devpost.com/" target="_blank" rel="noopener">Build With AI: Basics</a> · MIT licensed · Singapore 🇸🇬</p>
+  </footer>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
